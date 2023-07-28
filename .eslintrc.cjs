@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: ["react-refresh", "@typescript-eslint", "react"],
   rules: {
-    indent: ["error", "tab"],
+    indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "single"],
     semi: ["error", "never"],

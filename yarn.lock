@@ -149,6 +149,16 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.44.0.tgz"
   integrity sha512-Ag+9YM4ocKQx9AarydN0KY2j0ErMHNIocPDrVo8zAE44xLTjEtz81OdR68/cydGtk6m6jDb5Za3r2useMzYmSw==
 
+"@fontsource-variable/epilogue@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/epilogue/-/epilogue-5.0.6.tgz#c1e5388b5bf931b6e690f1730890ac4013decc23"
+  integrity sha512-TlYi6gVdd/6rT+38dWmmdTCxuYr5b4P4Dhm373Ym7LdRu0rg/nDqTZur8NRLH5DLl0eAeg+Q8w9jpVHmFJyoCw==
+
+"@fontsource-variable/inter@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/inter/-/inter-5.0.5.tgz#a03cf816dc1f0df24f61b30f5936bcc99e0aad03"
+  integrity sha512-hmj/jffr+1tabEPmvm+/b89MtbO6hd5PVbQ6HoMGTO7RMF5eD2C9UcprCgZTOF3OWh5uC21C9HZGN0O9wxe+UQ==
+
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.10.tgz"

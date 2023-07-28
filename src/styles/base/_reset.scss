@@ -1,0 +1,20 @@
+* {
+  transition-duration: 0.3s;
+  animation-duration: 0.3s;
+  outline: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 0.3em;
+  height: 0.3em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: blue;
+  padding: 0 2px;
+}

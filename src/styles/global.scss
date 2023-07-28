@@ -1,0 +1,17 @@
+@charset "UTF-8";
+// add to global
+
+// 1.configuration and helpers
+@import "utilities/variables";
+
+// 2. Vendors
+@import "vendors/bootstrap";
+
+// 3. Base stuff
+@import "base/reset", "base/typography";
+
+// 4. Components
+// @import "components/nav";
+
+// 5. Pages
+// @import "pages/home";

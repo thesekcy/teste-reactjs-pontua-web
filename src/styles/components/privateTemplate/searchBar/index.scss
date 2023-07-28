@@ -1,0 +1,13 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0px 25px;
+    border-bottom: 2px solid $divider_color;
+
+    input {
+      border: none;
+      margin-left: 10px;
+    }
+  }

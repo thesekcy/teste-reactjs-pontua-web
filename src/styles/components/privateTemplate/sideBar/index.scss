@@ -1,0 +1,14 @@
+.sidebar {
+    background: white;
+    box-shadow: 6px 0px 18px 0px rgba(0, 0, 0, 0.06);
+    height: 100vh;
+    width: 256px;
+
+    .brand {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid $divider_color;
+      padding: 0 25px;
+    }
+  }

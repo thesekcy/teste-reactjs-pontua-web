@@ -19,7 +19,7 @@ const routesConfig = [
     requiresAuth: true
   },
   {
-    path: '/profile',
+    path: '/profile/:id',
     component: Profile,
     requiresAuth: true
   },

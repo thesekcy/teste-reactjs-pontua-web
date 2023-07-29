@@ -1,7 +1,9 @@
 .private-template {
   display: flex;
 
-  @import "./searchBar/index.scss", "./sideBar/index.scss", "./sideBarItem/index.scss";
+  @import "./searchBar/index.scss",
+          "./sideBar/index.scss",
+          "./sideBarItem/index.scss";
 
   .private-content {
     display: flex;
@@ -10,7 +12,8 @@
 
     main {
       padding: 25px;
-      min-height: calc(100vh - 60px);
+      height: calc(100vh - 60px);
+      overflow-y: scroll;
     }
   }
 }

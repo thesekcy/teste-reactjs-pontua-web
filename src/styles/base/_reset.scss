@@ -10,15 +10,18 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: red;
-  border-radius: 3px;
+  background: $blue-200;
+  border-radius: 0px;
 }
 
 ::-webkit-scrollbar-track {
-  background: blue;
-  padding: 0 2px;
+  background: $divider_color;
 }
 
 a{
   text-decoration: none;
+}
+
+hr{
+  background-color: $divider_color;
 }

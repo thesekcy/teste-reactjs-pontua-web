@@ -1,0 +1,68 @@
+.profile {
+  h2 {
+    font-family: "Epilogue Variable", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 25px;
+    letter-spacing: -0.03em;
+    color: $blue-600;
+
+    span.bar {
+      color: $orange-500;
+    }
+
+    span.hero-name {
+      font-weight: 300;
+      color: $grey-500;
+    }
+  }
+
+  li {
+    font-family: "Inter Variable", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: $blue-200;
+
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.06);
+    padding: 30px 40px;
+    font-family: "Epilogue Variable", sans-serif;
+    align-items: center;
+
+    div {
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 150px;
+      }
+
+      &:last-child {
+        flex-direction: column;
+        margin-left: 30px;
+
+        h3 {
+          color: $blue-600;
+          font-weight: 700;
+          letter-spacing: -0.72px;
+        }
+        p {
+          color: #717171;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 153.5%; /* 24.56px */
+          letter-spacing: -0.48px;
+        }
+      }
+    }
+  }
+}

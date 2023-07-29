@@ -7,6 +7,7 @@ import {
 import routesConfig from './routesConfig'
 
 import PrivateTemplate from './components/privateTemplate/index'
+import { SearchBarProvider } from './contexts/searchBar/searchBarProvider'
 
 const AppRoutes = () => {
   const isAuthenticated = true
@@ -21,9 +22,11 @@ const AppRoutes = () => {
             element={
               route.requiresAuth ? (
                 isAuthenticated ? (
-                  <PrivateTemplate>
-                    <route.component />
-                  </PrivateTemplate>
+                  <SearchBarProvider>
+                    <PrivateTemplate>
+                      <route.component />
+                    </PrivateTemplate>
+                  </SearchBarProvider>
                 ) : (
                   <Navigate to="/login" replace />
                 )

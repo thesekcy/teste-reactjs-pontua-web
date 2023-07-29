@@ -1,0 +1,57 @@
+.pagination {
+  justify-content: center;
+
+  button {
+    background-color: #fff;
+    color: $blue-200;
+    padding: 14px 20px 10px;
+    border: none;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+
+    font-family: "Epilogue Variable", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+
+    &:last-child,
+    &:first-child {
+      display: flex;
+    }
+
+    &:last-child,
+    &:first-child,
+    &.active {
+      color: $blue-600;
+    }
+
+    &.active {
+      background-color: #F9FAFB;
+    }
+
+    &:disabled {
+      color: rgba($blue-600, 0.6) !important;
+      cursor: not-allowed;
+    }
+
+    &:first-child {
+      border-left: 1px solid $border-color;
+      border-radius: 8px 0 0 8px;
+
+      svg{
+        margin-right: 10px;
+      }
+    }
+    
+    &:last-child {
+      border-radius: 0 8px 8px 0;
+      
+      svg{
+        margin-left: 10px;
+      }
+    }
+
+  
+  }
+}

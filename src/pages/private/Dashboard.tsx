@@ -8,16 +8,16 @@ import {
 } from 'react'
 import createParamsToMarvelApiRequest from '../../services/createParamsToMarvelApiRequest'
 
-import Pagination from '../../components/pagination'
-import { MarvelCharacter } from '../../types'
+import Pagination from '../../components/Pagination'
+import { IMarvelCharacter } from '../../types'
 import { SearchBarContext } from '../../contexts/searchBar/searchBarContext'
-import CardCharacter from '../../components/cardCharacter'
+import CardCharacter from '../../components/CardCharacter'
 import { useMarvelApi } from '../../hooks/useMarvelApi'
-import SpinnerLoading from '../../components/spinnerLoading'
+import SpinnerLoading from '../../components/SpinnerLoading'
 
 export default function Dashboard() {
   const [loading, setLoading] = useState<boolean>(true)
-  const [heroes, setHeroes] = useState<MarvelCharacter[]>([])
+  const [heroes, setHeroes] = useState<IMarvelCharacter[]>([])
   const [currentPage, setCurrentPage] = useState<number>(1)
   const [totalPages, setTotalPages] = useState<number>(0)
   const { searchQuery } = useContext(SearchBarContext)
@@ -25,7 +25,7 @@ export default function Dashboard() {
   const marvelApiRef = useRef(marvelApi)
 
   const params = useMemo(
-    () => createParamsToMarvelApiRequest(currentPage, searchQuery),
+    () => createParamsToMarvelApiRequest({ currentPage, searchQuery }),
     [currentPage, searchQuery]
   )
 
@@ -64,7 +64,7 @@ export default function Dashboard() {
     return (
       <>
         <div className="characters-grid">
-          {heroes.map((character: MarvelCharacter, index) => (
+          {heroes.map((character: IMarvelCharacter, index) => (
             <CardCharacter character={character} key={index} />
           ))}
         </div>

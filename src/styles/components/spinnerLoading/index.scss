@@ -3,22 +3,18 @@ $ripple-size: 180px;
 @mixin keyframes-lds-ripple {
   @keyframes lds-ripple {
     0% {
-      top: $ripple-size / 2;
-      left: $ripple-size / 2;
+      top: calc($ripple-size / 2);
+      left: calc($ripple-size / 2);
       width: 0;
       height: 0;
       opacity: 0;
     }
     4.9% {
-      top: $ripple-size / 2;
-      left: $ripple-size / 2;
       width: 0;
       height: 0;
       opacity: 0;
     }
     5% {
-      top: $ripple-size / 2;
-      left: $ripple-size / 2;
       width: 0;
       height: 0;
       opacity: 1;

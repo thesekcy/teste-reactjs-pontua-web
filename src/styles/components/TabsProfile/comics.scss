@@ -1,0 +1,56 @@
+.comics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @media screen and (max-width: 1700px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    font-family: "Epilogue Variable", sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+
+    .top,
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .top {
+      h6 {
+        font-weight: 600;
+        padding-top: 10px;
+        color: #777;
+      }
+
+      h4 {
+        font-weight: 600;
+        font-size: 18px;
+        color: $blue-800;
+        padding: 20px 0px;
+      }
+
+      p {
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+      }
+
+      .thumbnail {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 8px;
+      }
+    }
+  }
+}

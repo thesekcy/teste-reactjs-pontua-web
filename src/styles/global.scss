@@ -11,8 +11,9 @@
 @import "base/reset", "base/typography";
 
 // 4. Components
-@import "components/privateTemplate/index", "components/pagination/index",
-  "components/cardCharacter/index", "components/spinnerLoading/index";
+@import "components/PrivateTemplate", "components/Pagination",
+  "components/CardCharacter", "components/SpinnerLoading",
+  "components/TabsProfile", "components/Button";
 
 // 5. Pages
-@import "pages/dashboard", "pages/profile";
+@import "pages/dashboard", "pages/profile", "pages/login";

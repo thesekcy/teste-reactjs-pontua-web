@@ -5,13 +5,25 @@
 - Typescript
 - React Router Dom
 - ESLint
-- Fontsource (fontes)
+- FontSource
 - Vitest
 - Cypress
 - Axios
 - JSON DB
 - SASS (SCSS)
 - Bootstrap (Only CSS)
+- Zod
+- React Hook Form
+- Radix-ui
+
+
+
+Passwords
+12345678 = $2a$10$EW8WvH7isuIvV2hyPn1DIeM51cOpmiTolcnpC03hVjcS2AHGdP4DW
+5SiNS73b%$x* = $2a$10$XEnpQMPctlfOwLBobG5aEu4eHGUGTCEO2f2ouIGkDVMX12rTPPfQy
+@OPbMvo43Ic5 = $2a$10$n5J3hIq4XHL7A.Ro7QSl8OQFyqyMKomxiOvSx88.zYgfADHpMonL2
+87@Z4WdmbI^J = $2a$10$xEmnntNm0cCSUeyu0R9eNOgBr6/umwdBUZK0uFtDV/hu47r.zcUk2
+
 
 # React + TypeScript + Vite
 

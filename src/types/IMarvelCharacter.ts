@@ -36,7 +36,7 @@ interface Url {
     url: string;
 }
 
-export interface MarvelCharacter {
+export interface IMarvelCharacter {
     id: number;
     name: string;
     description: string;

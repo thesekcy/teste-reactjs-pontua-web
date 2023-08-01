@@ -1,9 +1,9 @@
 import React from 'react'
-import { MarvelCharacter } from '../../types'
+import { IMarvelCharacter } from '../../types'
 import PlaceholderCharacter from '../../assets/min-placeholder.png'
 
 interface CardCharacterProps {
-  character: MarvelCharacter;
+  character: IMarvelCharacter;
 }
 
 const CardCharacter: React.FC<CardCharacterProps> = ({ character }) => {

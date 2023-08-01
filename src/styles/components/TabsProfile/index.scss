@@ -1,0 +1,28 @@
+.tabs-profile {
+  @import "comics.scss";
+
+  .TabsList {
+    display: flex;
+    gap: 26px;
+    border-bottom: 2px solid #eaecf0;
+  }
+
+  .TabsTrigger {
+    border: none;
+    background-color: #fff;
+    border-bottom: 3px solid #fff;
+    padding: 10px 0;
+
+    font-family: "Epilogue Variable", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #777777;
+  }
+
+  .TabsTrigger[data-state="active"] {
+    color: #081b4e;
+    border-bottom: 3px solid #081b4e;
+  }
+}

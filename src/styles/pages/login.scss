@@ -1,0 +1,143 @@
+.login {
+  display: flex;
+  justify-content: center;
+  background-color: $blue-800;
+  width: 100vw;
+  height: 100vh;
+
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+  }
+
+  .image-container,
+  .card-container {
+    padding: 50px;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    
+
+    @media screen and (max-width: 991px) {
+      height: fit-content;
+    }
+  }
+
+  .image-container {
+    .logo {
+      position: absolute;
+      @media screen and (max-width: 991px) {
+        position: relative;
+      }
+    }
+
+    .illustration {
+      @media screen and (min-width: 1500px) {
+        max-width: 615px;
+      }
+
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+  }
+
+  .card-container {
+    align-items: center;
+    font-family: "Epilogue Variable", sans-serif;
+    justify-content: center;
+
+    @media screen and (max-width: 1500px) {
+      min-width: 50%;
+    }
+
+    @media screen and (max-width: 991px) {
+      min-width: 80%;
+    }
+
+    h2 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      letter-spacing: -0.065em;
+      color: $blue-600;
+
+      span {
+        color: $orange-500;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: -0.065em;
+      color: $grey-500;
+    }
+
+    .card {
+      height: fit-content;
+      padding: 40px 30px;
+      border-radius: 20px;
+      max-width: 415px;
+
+      .custom-form {
+        position: relative;
+
+        input {
+          font-family: "Epilogue Variable", sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 16px;
+          letter-spacing: -0.065em;
+          color: #293d71;
+          padding: 20px 16px;
+          border-radius: 10px;
+
+          &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            color: #b7b7b7;
+          }
+
+          &:active,
+          &:focus {
+            box-shadow: none;
+            border-color: $blue-800;
+            border-width: 2px;
+          }
+        }
+
+        .icon {
+          position: absolute;
+          right: 16px;
+          top: 17px;
+          opacity: 0.3;
+
+          &.focused {
+            opacity: 1;
+          }
+
+          svg {
+            width: 22px;
+            height: 22px;
+
+            #svg-color {
+              fill: $blue-800;
+            }
+          }
+        }
+      }
+
+      .forgot-password {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        text-align: right;
+        letter-spacing: -0.065em;
+        color: #f21a05;
+
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

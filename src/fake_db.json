@@ -3,7 +3,8 @@
       {
         "uuid": "1a23b456-cdef-7890-12ab-34cd567890ef",
         "name": "João da Silva",
-        "email": "joao@example.com",
+        "email": "teste@teste.com",
+        "password": "$2a$10$EW8WvH7isuIvV2hyPn1DIeM51cOpmiTolcnpC03hVjcS2AHGdP4DW",  
         "created_at": "2023-07-27T12:34:56Z",
         "updated_at": "2023-07-27T12:34:56Z",
         "user_type": "admin",
@@ -13,6 +14,7 @@
         "uuid": "2a34b567-cdef-8901-23ab-45cd678901fg",
         "name": "Maria Souza",
         "email": "maria@example.com",
+        "password": "$2a$10$XEnpQMPctlfOwLBobG5aEu4eHGUGTCEO2f2ouIGkDVMX12rTPPfQy",
         "created_at": "2023-07-26T09:12:34Z",
         "updated_at": "2023-07-26T09:12:34Z",
         "user_type": "user",
@@ -22,6 +24,7 @@
         "uuid": "3a45b678-cdef-9012-34ab-56cd789012gh",
         "name": "Pedro Santos",
         "email": "pedro@example.com",
+        "password": "$2a$10$n5J3hIq4XHL7A.Ro7QSl8OQFyqyMKomxiOvSx88.zYgfADHpMonL2",
         "created_at": "2023-07-25T15:45:23Z",
         "updated_at": "2023-07-25T15:45:23Z",
         "user_type": "user",
@@ -31,19 +34,11 @@
         "uuid": "4a56b789-cdef-0123-45ab-67cd890123ij",
         "name": "Ana Oliveira",
         "email": "ana@example.com",
+        "password": "$2a$10$xEmnntNm0cCSUeyu0R9eNOgBr6/umwdBUZK0uFtDV/hu47r.zcUk2",
         "created_at": "2023-07-24T18:30:10Z",
         "updated_at": "2023-07-24T18:30:10Z",
         "user_type": "user",
         "heroes": ["Wonder Woman", "Black Widow", "Storm"]
-      },
-      {
-        "uuid": "5a67b890-cdef-1234-56ab-78cd901234kl",
-        "name": "Luiz Silva",
-        "email": "luiz@example.com",
-        "created_at": "2023-07-23T14:20:45Z",
-        "updated_at": "2023-07-23T14:20:45Z",
-        "user_type": "user",
-        "heroes": ["Spider-Man", "Iron Man", "Deadpool"]
       }
     ]
   }

@@ -1,7 +1,7 @@
-import Dashboard from './pages/private/Dashboard'
-import Profile from './pages/private/Profile'
-import Login from './pages/public/Login'
-import PasswordRecovery from './pages/public/PasswordRecovery'
+import Dashboard from './pages/private/dashboard'
+import Profile from './pages/private/profile'
+import Login from './pages/public/login'
+import PasswordRecovery from './pages/public/passwordRecovery'
 
 const routesConfig = [
   {

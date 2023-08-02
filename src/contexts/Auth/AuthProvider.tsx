@@ -1,7 +1,7 @@
-import { AuthContext } from './AuthContext'
+import { AuthContext } from './authContext'
 import { useEffect, useState } from 'react'
 import { IUser } from '../../types'
-import { generateToken, checkAuthentication } from '../../utils/AuthUtils'
+import { generateToken, checkAuthentication } from '../../utils/authUtils'
 import bcrypt from 'bcryptjs'
 import fakeDb from '../../fake_db.json'
 

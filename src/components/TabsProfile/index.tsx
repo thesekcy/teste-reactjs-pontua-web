@@ -7,13 +7,13 @@ import PlaceholderComics from '../../assets/ComicsPlaceholder.png'
 import PlaceholderCharacter from '../../assets/min-placeholder.png'
 import { IMarvelCharacter, IMarvelComics } from '../../types'
 import getRandomTeams from '../../utils/FakerHeroGenerator/teams'
-import RandomNumberInInterval from '../../utils/RandomNumberInInterval'
+import RandomNumberInInterval from '../../utils/randomNumberInInterval'
 import getRandomPowers from '../../utils/FakerHeroGenerator/powers'
 import getRandomSpecies from '../../utils/FakerHeroGenerator/species'
-import ButtonComponent from '../Button'
-import FormatTimestamp from '../../utils/FormatDateTimestamp'
-import FormatDolarToReal from '../../utils/FormatDolarToReal'
-import GetDolarValueInBRL from '../../utils/GetDolarValueInBRL'
+import ButtonComponent from '../button'
+import FormatTimestamp from '../../utils/formatDateTimestamp'
+import FormatDolarToReal from '../../utils/formatDolarToReal'
+import GetDolarValueInBRL from '../../utils/getDolarValueInBRL'
 
 export default function TabsProfile({
   character,
@@ -30,7 +30,7 @@ export default function TabsProfile({
 
   const authors = []
   for (let i = 0; i < RandomNumberInInterval(1, 5); i++) {
-    const nome = faker.name.fullName()
+    const nome = faker.person.fullName()
     authors.push(nome)
   }
 
@@ -155,12 +155,6 @@ export default function TabsProfile({
             return (
               <div key={index} className="card">
                 <div className="top">
-                  {/* <img
-                    className="thumbnail"
-                    src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
-                    alt={comic.title}
-                  /> */}
-
                   <img
                     src={
                       comic.thumbnail.path.includes('image_not_available')

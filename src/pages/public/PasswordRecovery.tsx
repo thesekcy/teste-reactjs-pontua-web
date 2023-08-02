@@ -6,8 +6,8 @@ import recoverySchema, {
   recoveryFormValues,
 } from '../../schemas/recoverySchema'
 
-import FloatingInputComponent from '../../components/FloatingInput'
-import ButtonComponent from '../../components/Button'
+import FloatingInputComponent from '../../components/floatingInput'
+import ButtonComponent from '../../components/button'
 
 import ImageLogin from '../../assets/login.svg'
 import Logo from '../../assets/logo_pontua_white.svg'

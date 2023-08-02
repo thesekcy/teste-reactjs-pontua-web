@@ -8,12 +8,12 @@ import {
 } from 'react'
 import createParamsToMarvelApiRequest from '../../services/createParamsToMarvelApiRequest'
 
-import Pagination from '../../components/Pagination'
+import Pagination from '../../components/pagination'
 import { IMarvelCharacter } from '../../types'
 import { SearchBarContext } from '../../contexts/searchBar/searchBarContext'
-import CardCharacter from '../../components/CardCharacter'
+import CardCharacter from '../../components/cardCharacter'
 import { useMarvelApi } from '../../hooks/useMarvelApi'
-import SpinnerLoading from '../../components/SpinnerLoading'
+import SpinnerLoading from '../../components/spinnerLoading'
 
 export default function Dashboard() {
   const [loading, setLoading] = useState<boolean>(true)

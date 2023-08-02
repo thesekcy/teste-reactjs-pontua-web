@@ -1,3 +1,4 @@
+import React, { useContext } from 'react'
 import {
   BrowserRouter as Router,
   Routes,
@@ -5,44 +6,59 @@ import {
   Navigate,
 } from 'react-router-dom'
 import routesConfig from './routesConfig'
-
 import PrivateTemplate from './components/PrivateTemplate/index'
 import { SearchBarProvider } from './contexts/searchBar/searchBarProvider'
-import { useContext } from 'react'
-import { AuthContext } from './contexts/Auth/AuthContext'
+import { AuthContext } from './contexts/auth/authContext'
 
-const AppRoutes = () => {
+const AppRoutes: React.FC = () => {
   const { isAuthenticated } = useContext(AuthContext)
-  console.log(isAuthenticated)
 
   return (
     <Router>
       <Routes>
-        {routesConfig.map((route) => (
+        {routesConfig.map((route) => {
+          const { path, requiresAuth } = route
+          const isAuthRequired = requiresAuth
+          const isUserAuthenticated = isAuthenticated
 
+          if (isAuthRequired && !isUserAuthenticated) {
+            return (
+              <Route
+                key={path}
+                path={path}
+                element={<Navigate to="/login" replace />}
+              />
+            )
+          }
 
-          <Route
-            key={route.path}
-            path={route.path}
-            element={
-              route.requiresAuth ? (
-                isAuthenticated ? (
+          if (!isAuthRequired && isUserAuthenticated) {
+            return (
+              <Route
+                key={path}
+                path={path}
+                element={<Navigate to="/dashboard" replace />}
+              />
+            )
+          }
+
+          return (
+            <Route
+              key={path}
+              path={path}
+              element={
+                isAuthRequired ? (
                   <SearchBarProvider>
                     <PrivateTemplate>
                       <route.component />
                     </PrivateTemplate>
                   </SearchBarProvider>
                 ) : (
-                  <Navigate to="/login" replace />
+                  <route.component />
                 )
-              ) : isAuthenticated ? (
-                <Navigate to="/dashboard" replace />
-              ) : (
-                <route.component />
-              )
-            }
-          />
-        ))}
+              }
+            />
+          )
+        })}
       </Routes>
     </Router>
   )

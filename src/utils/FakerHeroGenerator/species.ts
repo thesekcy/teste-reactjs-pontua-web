@@ -1,4 +1,4 @@
-import SelectRandomItemsFromArray from '../SelectRandomItemsFromArray'
+import SelectRandomItemsFromArray from '../selectRandomItemsFromArray'
 
 export const SpeciesList = [
   'Category:Race Categories',

@@ -2,9 +2,9 @@ import { useEffect, useState, useRef, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
 import { useMarvelApi } from '../../hooks/useMarvelApi'
 import createParamsToMarvelApiRequest from '../../services/createParamsToMarvelApiRequest'
-import SpinnerLoading from '../../components/SpinnerLoading'
+import SpinnerLoading from '../../components/spinnerLoading'
 import { IMarvelCharacter } from '../../types'
-import TabsProfile from '../../components/TabsProfile'
+import TabsProfile from '../../components/tabsProfile'
 
 export default function Profile() {
   const { id } = useParams()

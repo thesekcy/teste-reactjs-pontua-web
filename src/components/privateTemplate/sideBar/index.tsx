@@ -4,7 +4,7 @@ import { DashboardIcon } from '../../../assets/icons/dashboard'
 import { ProfileIcon } from '../../../assets/icons/profile'
 import { LogOutIcon } from '../../../assets/icons/logout'
 import { useContext } from 'react'
-import { AuthContext } from '../../../contexts/Auth/AuthContext'
+import { AuthContext } from '../../../contexts/auth/authContext'
 
 export default function SideBar() {
   const currentPath = window.location.pathname

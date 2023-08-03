@@ -6,7 +6,6 @@ const api = axios.create({
 })
 
 export const useMarvelApi = () => ({
-  // TODO: arrumar
   getAllCharacters: async (params: IMarvelApiParams) => {
     const res = await api.get('/characters', { params })
     return res.data

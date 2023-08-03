@@ -7,5 +7,5 @@ export type IUser = {
     created_at: string;
     updated_at: string;
     user_type: string;
-    heroes: string[];
+    heroes: { id: string; name: string; thumbnail: string }[];
 };

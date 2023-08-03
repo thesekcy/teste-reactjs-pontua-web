@@ -19,11 +19,21 @@
 
 
 Passwords
-12345678 = $2a$10$EW8WvH7isuIvV2hyPn1DIeM51cOpmiTolcnpC03hVjcS2AHGdP4DW
-5SiNS73b%$x* = $2a$10$XEnpQMPctlfOwLBobG5aEu4eHGUGTCEO2f2ouIGkDVMX12rTPPfQy
-@OPbMvo43Ic5 = $2a$10$n5J3hIq4XHL7A.Ro7QSl8OQFyqyMKomxiOvSx88.zYgfADHpMonL2
-87@Z4WdmbI^J = $2a$10$xEmnntNm0cCSUeyu0R9eNOgBr6/umwdBUZK0uFtDV/hu47r.zcUk2
+Email: teste@teste.com
+Senha: 12345678
 
+Email: maria@example.com
+senha: 5SiNS73b%$x*
+
+
+Algumas palavras no sistema foram mudadas para portugues para uma melhor experiencia, isso porque no figma, existiam palavras em portugues e em ingles misturadas.
+
+Palavras mudadas (referencia figma):
+- Home -> Início
+- Teams -> Times
+- Powers -> Poderes
+- Species -> Espécies
+- Authors -> Autores
 
 # React + TypeScript + Vite
 

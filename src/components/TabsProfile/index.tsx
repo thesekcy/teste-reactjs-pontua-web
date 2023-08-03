@@ -50,19 +50,19 @@ export default function TabsProfile({
           Visão Geral
         </Tabs.Trigger>
         <Tabs.Trigger className="TabsTrigger" value="teams">
-          Teams
+          Times
         </Tabs.Trigger>
         <Tabs.Trigger className="TabsTrigger" value="powers">
-          Powers
+          Poderes
         </Tabs.Trigger>
         <Tabs.Trigger className="TabsTrigger" value="species">
-          Species
+          Espécies
         </Tabs.Trigger>
         <Tabs.Trigger className="TabsTrigger" value="authors">
-          Authors
+          Autores
         </Tabs.Trigger>
         <Tabs.Trigger className="TabsTrigger" value="comics">
-          Comics
+          Quadrinhos
         </Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content className="TabsContent" value="geral">
@@ -174,7 +174,7 @@ export default function TabsProfile({
                   <p>
                     {comic.description
                       ? comic.description
-                      : 'Comic sem descrição'}
+                      : 'Quadrinho sem descrição'}
                   </p>
                 </div>
 

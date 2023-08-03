@@ -7,7 +7,7 @@ export default function SearchBar() {
   
   return (
     <div className="search-bar">
-      {routePath === '/' || routePath === '/dashboard' ? (
+      {routePath === '/' ? (
         <>
           <SearchIcon />
           <input

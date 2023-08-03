@@ -13,15 +13,20 @@
   }
 
   .sidebar-item {
-    padding: 10px 10px;
+    a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 10px 10px;
 
-    span {
-      margin-left: 10px;
-    }
+      &:hover {
+        background-color: $grey-background;
+        border-radius: 10px;
+      }
 
-    &:hover {
-      background-color: $grey-background;
-      border-radius: 10px;
+      span {
+        margin-left: 10px;
+      }
     }
   }
 }
@@ -30,16 +35,20 @@
   padding: 25px 15px;
 
   .sidebar-item {
-    padding: 10px 10px;
-    cursor: pointer;
+    a {
+      display: flex;
+      width: 100%;
+      padding: 10px 10px;
+      cursor: pointer;
 
-    span {
-      margin-left: 10px;
-    }
+      &:hover {
+        background-color: $grey-background;
+        border-radius: 10px;
+      }
 
-    &:hover {
-      background-color: $grey-background;
-      border-radius: 10px;
+      span {
+        margin-left: 10px;
+      }
     }
   }
 }

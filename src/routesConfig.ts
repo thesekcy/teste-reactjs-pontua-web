@@ -1,5 +1,6 @@
 import Dashboard from './pages/private/dashboard'
 import Profile from './pages/private/profile'
+import SelectAgent from './pages/private/selectAgent'
 import Login from './pages/public/login'
 import PasswordRecovery from './pages/public/passwordRecovery'
 
@@ -10,19 +11,21 @@ const routesConfig = [
     requiresAuth: false
   },
   {
-    path: '/password_recovery',
+    path: '/password-recovery',
     component: PasswordRecovery,
     requiresAuth: false
   },
+
   {
     path: '/',
     component: Dashboard,
     requiresAuth: true
   },
   {
-    path: '/dashboard',
-    component: Dashboard,
-    requiresAuth: true
+    path: '/profile',
+    component: SelectAgent,
+    requiresAuth: true,
+    usePrivateTemplate: false
   },
   {
     path: '/profile/:id',

@@ -1,26 +1,36 @@
 import { AuthContext } from './authContext'
 import { useEffect, useState } from 'react'
 import { IUser } from '../../types'
-import { generateToken, checkAuthentication } from '../../utils/authUtils'
+import {
+  generateToken,
+  checkAuthentication,
+  decodeToken,
+} from '../../utils/authUtils'
 import bcrypt from 'bcryptjs'
 import fakeDb from '../../fake_db.json'
 
 export const AuthProvider = ({ children }: { children: JSX.Element }) => {
-  const [user, setUser] = useState<IUser | 'unauthorized' | null>(null)
-  const [isAuthenticated, setIsAuthenticated] = useState(true)
+  const [user, setUser] = useState<IUser | undefined | null>(null)
+  const [isAuthenticated, setIsAuthenticated] = useState<null | boolean>(null)
 
   useEffect(() => {
-    const token = localStorage.getItem('jwtToken')
+    function checkAuth() {
+      const token = localStorage.getItem('jwtToken')
 
-    if (token) {
-      const isAuthenticated = checkAuthentication(token)
-      setIsAuthenticated(isAuthenticated)
-    } else {
-      setIsAuthenticated(false)
+      if (token) {
+        const isAuthenticated = checkAuthentication(token)
+        const email = decodeToken(token).email
+        setUser(findUser(email))
+        setIsAuthenticated(isAuthenticated)
+      } else {
+        setIsAuthenticated(false)
+      }
     }
+
+    checkAuth()
   }, [])
 
-  const findUser = (email: string) => {
+  const findUser = (email: string): IUser | undefined => {
     return fakeDb.users.find((user) => user.email === email)
   }
 

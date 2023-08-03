@@ -9,13 +9,18 @@
     flex-direction: column;
   }
 
+  .container {
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+
   .image-container,
   .card-container {
     padding: 50px;
     height: 100%;
     display: flex;
     align-self: center;
-    
 
     @media screen and (max-width: 991px) {
       height: fit-content;
@@ -58,6 +63,7 @@
       font-style: normal;
       font-weight: 700;
       font-size: 40px;
+      line-height: 40px;
       letter-spacing: -0.065em;
       color: $blue-600;
 

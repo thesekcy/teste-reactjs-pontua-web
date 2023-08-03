@@ -1,13 +1,13 @@
 import jwt_decode from 'jwt-decode'
 
 export interface IDecodedToken {
-    expirationTime: number;
-    email: string;
+  expirationTime: number;
+  email: string;
 }
 
 interface ITokenPayload {
-    email: string;
-    expirationTime: number;
+  email: string;
+  expirationTime: number;
 }
 
 const jwtSecret = import.meta.env.VITE_JWT_SECRET
@@ -17,6 +17,11 @@ export const generateToken = (payload: ITokenPayload): string => {
   const data = btoa(JSON.stringify(payload))
   const signature = btoa(header + '.' + data + '.' + jwtSecret)
   return `${header}.${data}.${signature}`
+}
+
+export const decodeToken = (token: string): { ext: number; email: string } => {
+  const decodedToken = jwt_decode(token) as IDecodedToken
+  return { ext: decodedToken.expirationTime, email: decodedToken.email }
 }
 
 export const checkAuthentication = (token: string): boolean => {

@@ -35,26 +35,29 @@ export default function Profile() {
 
         setCharacter(characterResponse.data.results[0])
         setComics(comicsResponse.data.results)
+
+        setLoading(false)
       } catch (error) {
         alert(error)
       }
     }
 
     GetCharacterAndComics()
-    setLoading(false)
+
+    localStorage.setItem('lastCharacterId', String(id))
   }, [id, paramsCharacters, paramsComics])
 
   if (loading) {
     return <SpinnerLoading />
-  } else {
-    return (
-      <div className="profile">
-        <h2 className="mb-4">
-          Perfil <span className="bar">/</span>{' '}
-          <span className="hero-name">{character?.name}</span>
-        </h2>
-        <TabsProfile character={character!} comics={comics!} />
-      </div>
-    )
   }
+
+  return (
+    <div className="profile">
+      <h2 className="mb-4">
+        Perfil <span className="bar">/</span>{' '}
+        <span className="hero-name">{character?.name}</span>
+      </h2>
+      <TabsProfile character={character!} comics={comics!} />
+    </div>
+  )
 }

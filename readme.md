@@ -39,6 +39,12 @@ Palavras mudadas (referencia figma):
 - Species -> Espécies
 - Authors -> Autores
 
+-----------------------------------
+
+no mobile a paginação foi trocada por um scroll loading.
+
+-----------------------------------
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

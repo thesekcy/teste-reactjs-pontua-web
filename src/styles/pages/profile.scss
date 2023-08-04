@@ -25,7 +25,6 @@
     font-size: 18px;
     line-height: 30px;
     color: $blue-200;
-
   }
 
   .card {
@@ -37,6 +36,25 @@
     padding: 30px 40px;
     font-family: "Epilogue Variable", sans-serif;
     align-items: center;
+
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+      text-align: center;
+
+      h3 {
+        margin-top: 20px;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      padding: 30px 20px;
+
+      div {
+        &:last-child {
+          margin-left: 0 !important;
+        }
+      }
+    }
 
     div {
       img {

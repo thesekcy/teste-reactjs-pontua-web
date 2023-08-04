@@ -18,5 +18,4 @@ export const useMarvelApi = () => ({
     const res = await api.get(`/characters/${id}/comics`, { params })
     return res.data
   },
-
 })

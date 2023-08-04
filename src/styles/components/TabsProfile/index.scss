@@ -1,10 +1,30 @@
 .tabs-profile {
   @import "comics.scss";
 
+  ::-webkit-scrollbar {
+    width: 0.1em;
+    height: 0.1em;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #747d94;
+    border-radius: 0px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #ebeff2;
+  }
+  
   .TabsList {
     display: flex;
     gap: 26px;
     border-bottom: 2px solid #eaecf0;
+
+    @media screen and (max-width: 991px) {
+      overflow-x: scroll;
+    }
+
+   
   }
 
   .TabsTrigger {
@@ -12,13 +32,13 @@
     background-color: #fff;
     border-bottom: 3px solid #fff;
     padding: 10px 0;
-
     font-family: "Epilogue Variable", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 20px;
     color: #777777;
+    white-space: nowrap;
   }
 
   .TabsTrigger[data-state="active"] {

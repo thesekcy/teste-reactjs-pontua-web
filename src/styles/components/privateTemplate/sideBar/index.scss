@@ -1,14 +1,85 @@
 .sidebar {
-    background: white;
-    box-shadow: 6px 0px 18px 0px rgba(0, 0, 0, 0.06);
-    height: 100vh;
-    width: 256px;
+  background: white;
+  box-shadow: 6px 0px 18px 0px rgba(0, 0, 0, 0.06);
+  height: 100vh;
+  width: 256px;
+  transition: 300ms;
+  animation: 300ms;
+  z-index: 999;
+  
+  @media screen and (min-width: 991px) {
+    &.hide {
+      width: fit-content;
+      animation: desaparecer 300ms forwards, sumir 300ms 300ms forwards;
 
-    .brand {
-      height: 60px;
-      display: flex;
-      align-items: center;
-      border-bottom: 2px solid $divider_color;
-      padding: 0 25px;
+      .brand {
+        padding: 0;
+        width: 0;
+
+        a {
+          transition: 300ms;
+          animation: 300ms;
+          left: -300px;
+          position: absolute;
+        }
+      }
+
+      .menu {
+        width: 100%;
+        border-right: 0;
+      }
     }
   }
+
+  button {
+    all: unset;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .brand,
+  .menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid $divider_color;
+    padding: 0 25px;
+  }
+
+  .menu {
+    border-bottom: 2px solid $divider_color;
+    border-right: 2px solid $divider_color;
+    justify-content: center;
+    min-width: 75px;
+
+    button {
+      cursor: pointer;
+
+      svg {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    &.hide {
+      width: 100%;
+      height: fit-content;
+      position: fixed;
+
+      .side-bar-items,
+      .side-bar-items-footer {
+        display: none;
+      }
+    }
+
+    &.show {
+      position: absolute;
+      z-index: 9999 !important;
+      box-shadow: 0px 0px 20px 2000px rgb(0 0 0 / 48%);
+    }
+  }
+}

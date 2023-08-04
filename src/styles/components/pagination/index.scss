@@ -15,6 +15,24 @@
     font-style: normal;
     font-weight: 500;
 
+    @media screen and (max-width: 991px) {
+      display: none;
+      &.next,
+      &.previous,
+      &.next-page,
+      &.previous-page,
+      &.active {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      &.next-page,
+      &.previous-page {
+        display: none;
+      }
+    }
+
     &:last-child,
     &:first-child {
       display: flex;
@@ -27,7 +45,7 @@
     }
 
     &.active {
-      background-color: #F9FAFB;
+      background-color: #f9fafb;
     }
 
     &:disabled {
@@ -39,19 +57,17 @@
       border-left: 1px solid $border-color;
       border-radius: 8px 0 0 8px;
 
-      svg{
+      svg {
         margin-right: 10px;
       }
     }
-    
+
     &:last-child {
       border-radius: 0 8px 8px 0;
-      
-      svg{
+
+      svg {
         margin-left: 10px;
       }
     }
-
-  
   }
 }

@@ -1,3 +1,4 @@
+import { CancelIcon } from './cancel'
 import { CheckIcon } from './check'
 import { ConfigIcon } from './config'
 import { DashboardIcon } from './dashboard'
@@ -9,6 +10,7 @@ import { EyeViewIcon } from './eyeView'
 import { LeftArrowIcon } from './leftArrow'
 import { ListIcon } from './list'
 import { LogOutIcon } from './logout'
+import { MenuIcon } from './menu'
 import { PlaceholderIcon } from './placeholder'
 import { ProfileIcon } from './profile'
 import { RightArrowIcon } from './rightArrow'
@@ -39,7 +41,9 @@ const iconMap: IconMapType = {
   TeamsIcon,
   PlaceholderIcon,
   ConfigIcon,
-  UsersIcon
+  UsersIcon,
+  CancelIcon,
+  MenuIcon
 }
 
 export default iconMap

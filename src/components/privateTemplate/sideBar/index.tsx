@@ -7,6 +7,7 @@ import { AuthContext } from '../../../contexts/Auth/authContext'
 import fakeDb from '../../../fake_db.json'
 import SpinnerLoading from '../../spinnerLoading'
 import iconMap from '../../../assets/icons/iconMap'
+import { MenuIcon } from '../../../assets/icons/menu'
 
 type MenuItemType = {
   title: string;
@@ -18,9 +19,12 @@ type MenuItemType = {
 
 export default function SideBar() {
   const currentPath = window.location.pathname
-  const { user, signOut } = useContext(AuthContext)
+  const [open, setOpen] = useState(true)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [loading, setLoading] = useState<boolean>(false)
   const [menus, setMenus] = useState<MenuItemType[][]>([])
+  const { user, signOut } = useContext(AuthContext)
+  const initialWindowWidth = window.innerWidth
 
   useEffect(() => {
     setLoading(true)
@@ -33,16 +37,41 @@ export default function SideBar() {
     setLoading(false)
   }, [])
 
+  useEffect(() => {
+    if (initialWindowWidth < 991) {
+      setOpen(false)
+    }
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+      if (windowWidth < 991) {
+        setOpen(false)
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [initialWindowWidth, windowWidth])
+
   if (loading) {
     return <SpinnerLoading />
   }
 
   return (
-    <div className="sidebar">
-      <div className="brand">
-        <a href="/">
-          <img src={Logo} alt="Logo Pontua Web" />
-        </a>
+    <div className={`sidebar ${open ? 'show' : 'hide'}`}>
+      <div className="d-flex">
+        <div className="menu">
+          <button className="menu-btn" onClick={() => setOpen((prev) => !prev)}>
+            <MenuIcon />
+          </button>
+        </div>
+        <div className="brand">
+          <a href="/">
+            <img src={Logo} alt="Logo Pontua Web" />
+          </a>
+        </div>
       </div>
       {menus.map((menu, index) => {
         return (
@@ -59,6 +88,7 @@ export default function SideBar() {
                   icon={<Icon />}
                   text={item.title}
                   link={item.link}
+                  menuOpen={open}
                   active={
                     item.activeType
                       ? item.activeType === 'contain'
@@ -77,6 +107,7 @@ export default function SideBar() {
         <SideBarItem
           icon={<LogOutIcon />}
           text="Sair"
+          menuOpen={open}
           onClick={() => {
             signOut()
           }}

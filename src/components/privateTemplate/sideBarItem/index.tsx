@@ -6,6 +6,7 @@ interface SideBarItemProps
   text: string;
   link?: string;
   active: boolean;
+  menuOpen: boolean;
 }
 
 export default function SideBarItem({
@@ -13,11 +14,12 @@ export default function SideBarItem({
   text,
   link,
   active,
+  menuOpen,
   ...rest
 }: SideBarItemProps) {
   return (
     <div className={`sidebar-item ${active && 'active'}`}>
-      <a href={link} {...rest}>
+      <a href={link} {...rest} className={menuOpen ? 'show' : 'hide'}>
         {icon && React.cloneElement(icon)}
         {text && <span>{text}</span>}
       </a>

@@ -20,7 +20,15 @@ const Pagination: React.FC<PaginationProps> = ({
     <button
       key={page}
       onClick={() => handlePageChange(page)}
-      className={currentPage === page ? 'active' : ''}
+      className={
+        currentPage === page
+          ? 'active'
+          : currentPage - 1 === page
+            ? 'previous-page'
+            : currentPage + 1 === page
+              ? 'next-page'
+              : ''
+      }
     >
       {page}
     </button>
@@ -40,8 +48,8 @@ const Pagination: React.FC<PaginationProps> = ({
       if (currentPage <= 3) {
         pageButtons.push(renderPageButton(3))
         pageButtons.push(<button key="ellipsis">...</button>)
-        pageButtons.push(renderPageButton(totalPages -2 ))
-        pageButtons.push(renderPageButton(totalPages -1 ))
+        pageButtons.push(renderPageButton(totalPages - 2))
+        pageButtons.push(renderPageButton(totalPages - 1))
         pageButtons.push(renderPageButton(totalPages))
       } else if (currentPage >= totalPages - 2) {
         pageButtons.push(
@@ -77,6 +85,7 @@ const Pagination: React.FC<PaginationProps> = ({
   return (
     <div className="pagination">
       <button
+        className="previous-page"
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={isFirstPage}
       >
@@ -85,6 +94,7 @@ const Pagination: React.FC<PaginationProps> = ({
       </button>
       {renderPageButtons()}
       <button
+        className="next-page"
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={isLastPage}
       >

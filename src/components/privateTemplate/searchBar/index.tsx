@@ -4,11 +4,11 @@ import { SearchBarContext } from '../../../contexts/searchBar/searchBarContext'
 export default function SearchBar() {
   const routePath = window.location.pathname
   const { searchQuery, setSearchQuery } = useContext(SearchBarContext)
-  
+
   return (
-    <div className="search-bar">
+    <>
       {routePath === '/' ? (
-        <>
+        <div className="search-bar">
           <SearchIcon />
           <input
             type="text"
@@ -16,10 +16,10 @@ export default function SearchBar() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-        </>
+        </div>
       ) : (
-        <></>
+        <div className="search-bar-no-content"></div>
       )}
-    </div>
+    </>
   )
 }

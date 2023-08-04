@@ -7,20 +7,22 @@ import {
   decodeToken,
 } from '../../utils/authUtils'
 import bcrypt from 'bcryptjs'
-import fakeDb from '../../fake_db.json'
+import { useMockUserApi } from '../../hooks/useMockUserApi'
 
 export const AuthProvider = ({ children }: { children: JSX.Element }) => {
   const [user, setUser] = useState<IUser | undefined | null>(null)
   const [isAuthenticated, setIsAuthenticated] = useState<null | boolean>(null)
+  const MockUserApi = useMockUserApi()
 
   useEffect(() => {
-    function checkAuth() {
+    async function checkAuth() {
       const token = localStorage.getItem('jwtToken')
 
       if (token) {
         const isAuthenticated = checkAuthentication(token)
         const email = decodeToken(token).email
-        setUser(findUser(email))
+        const foundUser = await MockUserApi.findUserByEmail(email)
+        setUser(foundUser)
         setIsAuthenticated(isAuthenticated)
       } else {
         setIsAuthenticated(false)
@@ -28,18 +30,15 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
     }
 
     checkAuth()
-  }, [])
+  }, [MockUserApi])
 
-  const findUser = (email: string): IUser | undefined => {
-    return fakeDb.users.find((user) => user.email === email)
-  }
 
   const signIn = async (email: string, password: string) => {
     try {
-      const foundUser = findUser(email)
+      const foundUser = await MockUserApi.findUserByEmail(email)
 
       if (!foundUser) {
-        throw new Error('Email não cadastrado.')
+        return false
       }
 
       const isMatch = await bcrypt.compare(password, foundUser.password)
@@ -52,7 +51,6 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
         setIsAuthenticated(true)
         return true
       } else {
-        alert('As senhas não correspondem!')
         return false
       }
     } catch (error) {
@@ -66,8 +64,20 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
     setIsAuthenticated(false)
   }
 
+  const recoveryPassword = async (email: string) => {
+    const { data } = await MockUserApi.sendRecoveryPassword(email)
+
+    if (data.message === true) {
+      return true
+    } else {
+      return false
+    }
+  }
+
   return (
-    <AuthContext.Provider value={{ user, signIn, signOut, isAuthenticated }}>
+    <AuthContext.Provider
+      value={{ user, signIn, signOut, isAuthenticated, recoveryPassword }}
+    >
       {children}
     </AuthContext.Provider>
   )

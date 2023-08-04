@@ -58,6 +58,11 @@
     @media screen and (max-width: 991px) {
       min-width: 80%;
     }
+  
+    @media screen and (max-width: 767px) {
+      min-width: 90%;
+      padding: 15px;
+    }
 
     h2 {
       font-style: normal;
@@ -83,6 +88,11 @@
       padding: 40px 30px;
       border-radius: 20px;
       max-width: 415px;
+
+      @media screen and (max-width: 767px) {
+        max-width: 100%;
+        width: 100%;
+      }
 
       .custom-form {
         position: relative;

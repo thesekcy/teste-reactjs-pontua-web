@@ -147,7 +147,7 @@ O projeto ficará disponivel por padrão em[http://localhost:5173/](http://local
 ## Sobre o projeto
 
   O projeto foi desenvolvido para um teste, visando a vaga de Desenvolvedor React na [Pontua Web](https://pontua.com.br/) e se trata sobre um projeto com chamadas a API da Marvel.
-
+  Projeto disponivel em: https://teste-reactjs-pontua-fty091zwu-thesekcy.vercel.app/
 
 **As técnologias utilizadas no projeto foram:**
 - Vite

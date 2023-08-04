@@ -2,7 +2,7 @@ import Logo from '../../../assets/logo_pontua.svg'
 import SideBarItem from '../sideBarItem'
 import { LogOutIcon } from '../../../assets/icons/logout'
 import { useContext, useEffect, useState } from 'react'
-import { AuthContext } from '../../../contexts/Auth/authContext'
+import { AuthContext } from '../../../contexts/auth/authContext'
 
 import fakeDb from '../../../fake_db.json'
 import SpinnerLoading from '../../spinnerLoading'

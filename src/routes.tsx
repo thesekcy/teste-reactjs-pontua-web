@@ -8,7 +8,7 @@ import {
 import routesConfig from './routesConfig'
 import PrivateTemplate from './components/privateTemplate/index'
 import { SearchBarProvider } from './contexts/searchBar/searchBarProvider'
-import { AuthContext } from './contexts/Auth/authContext'
+import { AuthContext } from './contexts/auth/authContext'
 import SpinnerLoading from './components/spinnerLoading'
 
 interface routesConfigProps {

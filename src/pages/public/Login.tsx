@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { AuthContext } from '../../contexts/Auth/authContext'
+import { AuthContext } from '../../contexts/auth/authContext'
 import { useNavigate } from 'react-router-dom'
 
 import { EmailIcon } from '../../assets/icons/email'

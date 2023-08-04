@@ -12,7 +12,7 @@ import ButtonComponent from '../../components/button'
 import { EmailIcon } from '../../assets/icons/email'
 import { LeftArrowIcon } from '../../assets/icons/leftArrow'
 import LoginTemplate from '../../components/loginTemplate'
-import { AuthContext } from '../../contexts/Auth/authContext'
+import { AuthContext } from '../../contexts/auth/authContext'
 import ToastComponent from '../../components/toast'
 
 export default function PasswordRecovery() {

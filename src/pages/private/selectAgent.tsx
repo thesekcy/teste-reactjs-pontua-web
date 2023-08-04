@@ -3,7 +3,7 @@ import * as Select from '@radix-ui/react-select'
 
 import { IUser } from '../../types'
 
-import { AuthContext } from '../../contexts/Auth/authContext'
+import { AuthContext } from '../../contexts/auth/authContext'
 import LoginTemplate from '../../components/loginTemplate'
 
 import { CheckIcon } from '../../assets/icons/check'

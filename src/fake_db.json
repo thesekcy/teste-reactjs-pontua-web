@@ -122,7 +122,7 @@
         "title": "Placeholder Admin",
         "link": "#",
         "icon": "PlaceholderIcon",
-        "restriction": "user"
+        "restriction": "admin"
       },
       {
         "title": "Painel",

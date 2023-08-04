@@ -44,7 +44,7 @@ function ButtonComponent({
     return <span className={marginSide}>{icon}</span>
   }
 
-  const buttonClassName = `button btn-${theme} ${size} ${width} ${customClass}`
+  const buttonClassName = `button btn-${theme || ''} ${size || ''} ${width || ''} ${customClass || ''}`
   const rightIconsClassName = 'ms-2 right-icon'
   const leftIconsClassName = 'me-2 left-icon'
 

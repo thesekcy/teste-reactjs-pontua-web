@@ -1,74 +1,95 @@
-## Técnologias pretendidas:
+Esse é um projeto Vite + React + Typescript
 
+  
+
+## Rodando pela primeira vez 
+
+Primeiramente instale todas as dependencias com.  
+
+```bash
+npm  install
+# or
+yarn  install
+```
+
+Depois para rodar o projeto basta usar os comandos abaixo:
+```bash
+npm  run  dev
+# or
+yarn  dev
+```
+
+
+  
+
+O projeto ficará disponivel por padrão em[http://localhost:5173/](http://localhost:5173/).
+
+
+
+  
+
+## Sobre o projeto
+
+  O projeto foi desenvolvido para um teste, visando a vaga de Desenvolvedor React na [Pontua Web](https://pontua.com.br/) e se trata sobre um projeto com chamadas a API da Marvel.
+
+
+**As técnologias utilizadas no projeto foram:**
 - Vite
 - React
 - Typescript
 - React Router Dom
 - ESLint
 - FontSource
-- Vitest
-- Cypress
 - Axios
-- JSON DB
+- Fake JSON DB
 - SASS (SCSS)
 - Bootstrap (Only CSS)
 - Zod
 - React Hook Form
 - Radix-ui
 
------------------------------------
+ 
+## Contas para acesso:
 
-Contas
+**User type Admin**
 
-Email: teste@teste.com
-Senha: 12345678
-Type: admin
+    Email: teste@teste.com
+    Senha: 12345678
 
-Email: maria@example.com
-senha: 5SiNS73b%$x*
-Type: user
+**User type User**
 
------------------------------------
+    Email: maria@example.com
+    Senha: 5SiNS73b%$x*
 
-Algumas palavras no sistema foram mudadas para portugues para uma melhor experiencia, isso porque no figma, existiam palavras em portugues e em ingles misturadas.
+## Fake Database
+Foi criado um fake database com json, localizado em `/src/fake_db.json` o arquivo contem informações de usuários e menus.
 
-Palavras mudadas (referencia figma):
-- Home -> Início
-- Teams -> Times
-- Powers -> Poderes
-- Species -> Espécies
-- Authors -> Autores
+## Icones
+Todos os icones foram importados como SVG e utilizados como SVG dentro do código, assim caso necessario há a possibilidade de alterar cor, tamanho, espessura e etc pelo css ou até mesmo por parametros, mas para ajustar por parametros seria necessario fazer alguns ajustes. Todas as alterações foram feitas por scss.
 
------------------------------------
+## Geradores de Poderes, Especies, Autores e Times
+Infelizmente a Api da Marvel não fornece informações sobre os seus herois, somente nome e as vezes descrições, por isso para seguir o figma foi criado um gerador com alguns nomes para Poderes, Espécies e Autores.
 
-no mobile a paginação foi trocada por um scroll loading.
+- O gerador de Autores foi feito utilizando a lib FakerJs
+- O gerador de Poderes, Espécies e Times, foi feito criando um array com varios nomes, e uma função que pega aleatoriamente dentro do array, a quantidade desejada.
+  
+## Mudanças no layout
 
------------------------------------
+- Algumas palavras no sistema foram alteradas para português para uma melhor experiencia, isso porque no figma, existiam palavras em português e outras em inglês misturadas.
+Exemplos:
+    
 
-# React + TypeScript + Vite
+     Home -> Início
+        Teams -> Times
+        Powers -> Poderes
+        Species -> Espécies
+        Authors -> Autores
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Algumas partes do layout foram alteradas para fazer os opcionais, a mudança mais significativa foi no template de navegação autenticado, onde possui a opção de estender e retrair o menu, assim deixando o menu responsivo para o mobile.
 
-Currently, two official plugins are available:
+  
+## Possíveis melhorias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Fazia parte dos meus planos criar testes usando Vitest + Testing Library, porem tive contratempos pessoais e não estarei conseguindo fazer essa parte.
+- Tambem seria possivel melhorar alguns componentes, deixando-os mais segmentados e de facil manutenção
+ 

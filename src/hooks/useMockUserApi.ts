@@ -5,11 +5,19 @@ export const useMockUserApi = () => ({
   findUserByEmail: async (email: string) => {
     return fakeDb.users.find((user) => user.email === email)
   },
-  sendRecoveryPassword: async (_email: string) => {
-
-    return {
-      data: {
-        message: true // Change to false to view the toast message error
+  sendRecoveryPassword: async (email: string) => {
+    const foundUser = await fakeDb.users.find((user) => user.email === email)
+    if (foundUser) {
+      return {
+        data: {
+          message: true
+        }
+      }
+    } else {
+      return {
+        data: {
+          message: false
+        }
       }
     }
   }

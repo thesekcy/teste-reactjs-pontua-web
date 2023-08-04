@@ -43,7 +43,7 @@ export default function PasswordRecovery() {
         triggerToast={recoverySend === false && !recoverySend}
         title="Oops. Erro inesperado"
         description="Houve um problema ao tentar enviar o e-mail de recuperação de senha. Tente novamente mais tarde."
-        type="success"
+        type="error"
       />
       <LoginTemplate>
         {recoverySend ? (

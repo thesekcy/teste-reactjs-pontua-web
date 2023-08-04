@@ -6,7 +6,7 @@ import '@fontsource-variable/epilogue/wght.css'
 import '@fontsource-variable/inter/slnt.css'
 
 import './styles/global.scss'
-import { AuthProvider } from './contexts/auth/authProvider.tsx'
+import { AuthProvider } from './contexts/Auth/authProvider.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

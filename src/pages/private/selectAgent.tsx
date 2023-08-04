@@ -3,13 +3,12 @@ import * as Select from '@radix-ui/react-select'
 
 import { IUser } from '../../types'
 
-import { AuthContext } from '../../contexts/auth/authContext'
+import { AuthContext } from '../../contexts/Auth/authContext'
 import LoginTemplate from '../../components/loginTemplate'
 
 import { CheckIcon } from '../../assets/icons/check'
 import { UpArrowIcon } from '../../assets/icons/upArrow'
 
-import './styles.css'
 import ButtonComponent from '../../components/button'
 
 interface SelectItemProps {
@@ -32,7 +31,7 @@ export default function SelectAgent() {
 
   return (
     <LoginTemplate>
-      <div className="profile">
+      <div className="select-agent">
         <h2 className="mb-4">
           Selecione o seu agente mais legal<span>.</span>
         </h2>
@@ -41,7 +40,11 @@ export default function SelectAgent() {
           <Select.Root
             required
             onValueChange={(value) => setSelectedCharacter(value)}
-            value={user?.heroes.find((hero) => hero.id === selectedCharacter) ? selectedCharacter : undefined}
+            value={
+              user?.heroes.find((hero) => hero.id === selectedCharacter)
+                ? selectedCharacter
+                : undefined
+            }
           >
             <Select.Trigger className="SelectTrigger" aria-label="Food">
               <div className="content">

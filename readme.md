@@ -16,15 +16,19 @@
 - React Hook Form
 - Radix-ui
 
+-----------------------------------
 
+Contas
 
-Passwords
 Email: teste@teste.com
 Senha: 12345678
+Type: admin
 
 Email: maria@example.com
 senha: 5SiNS73b%$x*
+Type: user
 
+-----------------------------------
 
 Algumas palavras no sistema foram mudadas para portugues para uma melhor experiencia, isso porque no figma, existiam palavras em portugues e em ingles misturadas.
 

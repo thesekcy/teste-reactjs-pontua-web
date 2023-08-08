@@ -9,6 +9,11 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
+    setupFiles: './setup-tests.ts',
+    coverage: {
+      provider: 'v8', //istanbul or 'v8'
+      reporter: ['text', 'json', 'html'],
+    },
   },
   resolve: {
     alias: {
